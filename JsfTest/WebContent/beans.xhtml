@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+    <h2>Liste der verfügbaren Beans:</h2>
+    <br />
+
+    <h:dataTable var="beanInfo" value="#{beanModel.allBeanDescriptions}" border="1"> 
+        <f:facet name="header">Bean-Beschreibung</f:facet>
+        <h:column>
+            <f:facet name="header">Bean-Klasse</f:facet>
+            #{beanInfo.beanClass}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Bean-Name</f:facet>
+            #{beanInfo.name}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Scope</f:facet>
+            #{beanInfo.scope}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Annotations</f:facet>
+            #{beanInfo.annotations}
+        </h:column>
+    </h:dataTable>
+
+</h:body>
+</html>
