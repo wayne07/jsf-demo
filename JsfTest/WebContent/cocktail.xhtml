@@ -3,21 +3,34 @@
       xmlns:ui="http://java.sun.com/jsf/facelets" 
       xmlns:h="http://java.sun.com/jsf/html" 
       xmlns:f="http://java.sun.com/jsf/core">
-
+<h:head></h:head>
 <h:body>
 
+	<h:form>
 	<fieldset>
 	<legend>Cocktailbestellung</legend>
 	<h2>Bestellung aufgeben.</h2>
-	<h:form>
 	Cocktail-Name:
-	<h:inputText value="#{cocktailModel.cocktailName}" size="75"/><br/><br/>
+	
+	<h:inputText value="#{cocktailModel.cocktailName}" size="75"/>
+
+	<br/><br/>
 	<h:commandButton action="#{cocktailModel.doInhouseOrder()}"	value="Inhouse Order"/>
-	<h:commandButton action="#{cocktailModel.doTakeawayOrder()}" value="Takeaway Order"/>
-	</h:form>
+	<h:commandButton action="#{cocktailModel.doTakeawayOrder()}" value="Takeaway Order">
+	   <f:ajax render="tkCounter"/>
+	</h:commandButton>   
 	</fieldset>
+	<br/>
+	
+	<fieldset>
+	<legend>Anzahl Takeaway-Orders mit Ajax</legend>
+	<h2><h:outputText value="#{takeawayCounter.takeawayCounter}" id="tkCounter"/></h2><br/>
+    <h:commandButton action="#{takeawayCounter.resetTakeawayCounter()}" value="Reset TakeawayCounter">
+       <f:ajax render="tkCounter"/>
+    </h:commandButton>   
+	</fieldset>
+	</h:form>
     
 </h:body>
-   
    
 </html>

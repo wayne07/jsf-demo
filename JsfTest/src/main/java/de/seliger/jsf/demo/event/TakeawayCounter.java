@@ -1,13 +1,18 @@
 package de.seliger.jsf.demo.event;
 
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Named;
 
 import org.apache.log4j.Logger;
 
 @Named
-public class TakeawayCounter {
+@SessionScoped
+public class TakeawayCounter implements Serializable {
 
+    private static final long serialVersionUID = 2168558462804551689L;
     private final static Logger LOGGER = Logger.getLogger(TakeawayCounter.class);
     private int counter = 0;
 
@@ -22,4 +27,9 @@ public class TakeawayCounter {
     public int getTakeawayCounter() {
         return counter;
     }
+
+    public void resetTakeawayCounter() {
+        this.counter = 0;
+    }
+
 }
