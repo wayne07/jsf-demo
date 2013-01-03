@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+
+	<fieldset>
+	<legend>Cocktailbestellung</legend>
+	<h2>Bestellung aufgeben.</h2>
+	<h:form>
+	Cocktail-Name:
+	<h:inputText value="#{cocktailModel.cocktailName}" size="75"/><br/><br/>
+	<h:commandButton action="#{cocktailModel.doInhouseOrder()}"	value="Inhouse Order"/>
+	<h:commandButton action="#{cocktailModel.doTakeawayOrder()}" value="Takeaway Order"/>
+	</h:form>
+	</fieldset>
+    
+</h:body>
+   
+   
+</html>
