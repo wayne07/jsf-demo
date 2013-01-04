@@ -12,12 +12,12 @@
 	<h2>Bestellung aufgeben.</h2>
 	Cocktail-Name:
 	
-	<h:inputText value="#{cocktailModel.cocktailName}" size="75"/>
+	<h:inputText value="#{cocktailModel.cocktailName}" id="cocktailName" size="75"/>
 
 	<br/><br/>
 	<h:commandButton action="#{cocktailModel.doInhouseOrder()}"	value="Inhouse Order"/>
 	<h:commandButton action="#{cocktailModel.doTakeawayOrder()}" value="Takeaway Order">
-	   <f:ajax render="tkCounter"/>
+	   <f:ajax render="tkCounter" execute="cocktailName"/>
 	</h:commandButton>   
 	</fieldset>
 	<br/>
