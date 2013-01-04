@@ -10,11 +10,20 @@
 	<fieldset>
 	<legend>Cocktailbestellung</legend>
 	<h2>Bestellung aufgeben.</h2>
-	Cocktail-Name:
-	
-	<h:inputText value="#{cocktailModel.cocktailName}" id="cocktailName" size="75"/>
 
-	<br/><br/>
+	<table>
+		<tr>
+			<td>Cocktail-Name:
+				<h:inputText value="#{cocktailModel.cocktailName}"
+							 required="false"
+							 requiredMessage="You must enter a Cocktail Name."
+							 id="cocktailName" 
+							 size="60"/>
+		    </td>
+		</tr>
+	</table>
+
+	<br/>
 	<h:commandButton action="#{cocktailModel.doInhouseOrder()}"	value="Inhouse Order"/>
 	<h:commandButton action="#{cocktailModel.doTakeawayOrder()}" value="Takeaway Order">
 	   <f:ajax render="tkCounter" execute="cocktailName"/>
@@ -24,7 +33,7 @@
 	
 	<fieldset>
 	<legend>Anzahl Takeaway-Orders mit Ajax</legend>
-	<h2><h:outputText value="#{takeawayCounter.takeawayCounter}" id="tkCounter"/></h2><br/>
+	<h2><h:outputText value="#{takeawayCounter.takeawayCounter}" id="tkCounter"/></h2>
     <h:commandButton action="#{takeawayCounter.resetTakeawayCounter()}" value="Reset TakeawayCounter">
        <f:ajax render="tkCounter"/>
     </h:commandButton>   
