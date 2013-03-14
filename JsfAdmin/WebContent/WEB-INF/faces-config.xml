@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+ <navigation-rule id="openMegaMenu">
+  <from-view-id>*</from-view-id>
+  <navigation-case>
+   <from-outcome>openMegaMenu</from-outcome>
+   <to-view-id>/pages/megamenu.xhtml</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>openMenuBar</from-outcome>
+   <to-view-id>/pages/menubar.xhtml</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <application>
+  <resource-bundle>
+   <base-name>resources</base-name>
+   <var>msgs</var>
+  </resource-bundle>
+ </application>
+</faces-config>

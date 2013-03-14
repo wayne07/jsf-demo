@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ez="http://java.sun.com/jsf/composite/demo"
+    xmlns:p="http://primefaces.org/ui"  >
+
+	<ui:composition template="/templates/admin.xhtml">
+
+		<ui:define name="pageTitle">Welcome Admin</ui:define>
+
+		<ui:define name="pageHeader">JSF 2 Welcome Admin</ui:define>
+
+		<ui:define name="body">
+  
+
+            <p:megaMenu>
+             <p:submenu label="TV" icon="ui-icon-check">
+              <p:column>
+               <p:submenu label="TV.1">
+                <p:menuitem value="TV.1.1" url="#" />
+                <p:menuitem value="TV.1.2" url="#" />
+               </p:submenu>
+               <p:submenu label="TV.2">
+                <p:menuitem value="TV.2.1" url="#" />
+                 <p:menuitem value="TV.2.2" url="#" />
+                  <p:menuitem value="TV.2.3" url="#" />
+               </p:submenu>
+               <p:submenu label="TV.3">
+                <p:menuitem value="TV.3.1" url="#" />
+                 <p:menuitem value="TV.3.2" url="#" />
+               </p:submenu>
+              </p:column>
+              <p:column>
+               <p:submenu label="TV.4">
+                <p:menuitem value="TV.4.1" url="#" />
+                 <p:menuitem value="TV.4.2" url="#" />
+               </p:submenu>
+               <p:submenu label="TV.5">
+                <p:menuitem value="TV.5.1" url="#" />
+                 <p:menuitem value="TV.5.2" url="#" />
+                  <p:menuitem value="TV.5.3" url="#" />
+               </p:submenu>
+               <p:submenu label="TV.6">
+                <p:menuitem value="TV.6.1" url="#" />
+                 <p:menuitem value="TV.6.2" url="#" />
+                  <p:menuitem value="TV.6.3" url="#" />
+               </p:submenu>
+              </p:column>
+             </p:submenu>
+            </p:megaMenu>
+
+
+        </ui:define>
+	</ui:composition>
+</html>
