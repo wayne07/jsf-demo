@@ -1,7 +1,7 @@
 package de.seliger.login;
 
 public class LoginBean {
-
+    
     private String user;
     private String password;
 

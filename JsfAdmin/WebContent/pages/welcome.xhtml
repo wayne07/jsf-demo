@@ -14,43 +14,14 @@
 
 		<ui:define name="body">
   
-
-            <p:megaMenu>
-             <p:submenu label="TV" icon="ui-icon-check">
-              <p:column>
-               <p:submenu label="TV.1">
-                <p:menuitem value="TV.1.1" url="#" />
-                <p:menuitem value="TV.1.2" url="#" />
-               </p:submenu>
-               <p:submenu label="TV.2">
-                <p:menuitem value="TV.2.1" url="#" />
-                 <p:menuitem value="TV.2.2" url="#" />
-                  <p:menuitem value="TV.2.3" url="#" />
-               </p:submenu>
-               <p:submenu label="TV.3">
-                <p:menuitem value="TV.3.1" url="#" />
-                 <p:menuitem value="TV.3.2" url="#" />
-               </p:submenu>
-              </p:column>
-              <p:column>
-               <p:submenu label="TV.4">
-                <p:menuitem value="TV.4.1" url="#" />
-                 <p:menuitem value="TV.4.2" url="#" />
-               </p:submenu>
-               <p:submenu label="TV.5">
-                <p:menuitem value="TV.5.1" url="#" />
-                 <p:menuitem value="TV.5.2" url="#" />
-                  <p:menuitem value="TV.5.3" url="#" />
-               </p:submenu>
-               <p:submenu label="TV.6">
-                <p:menuitem value="TV.6.1" url="#" />
-                 <p:menuitem value="TV.6.2" url="#" />
-                  <p:menuitem value="TV.6.3" url="#" />
-               </p:submenu>
-              </p:column>
-             </p:submenu>
-            </p:megaMenu>
-
+        <h:form>
+            B: <p:inputText label="Benutzer" value="#{loginBean.user}" />
+            <br/>
+            P: <p:password label="Passwort" value="#{loginBean.password}" inline="true" feedback="true" />        
+            <br/>
+            <br/>
+            <h:commandButton action="checkLogin"  value="Anmelden" />
+        </h:form>  
 
         </ui:define>
 	</ui:composition>
